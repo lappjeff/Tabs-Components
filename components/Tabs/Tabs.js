@@ -1,4 +1,7 @@
+let slideText = new TimelineMax({paused: true, reverse: true})
 
+slideText.
+    to('.tabs-item-selected', .3, {display: 'block'})
 class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
@@ -26,6 +29,9 @@ class TabLink {
 
     // Call the select method on the item associated with this link
     this.tabItem.select();
+
+    slideText.reversed() ? slideText.play() : slideText.reverse();slideText
+
   }
 }
 
