@@ -1,3 +1,10 @@
+let slideMenu = new TimelineMax({paused: true, reverse: true})
+
+slideMenu.
+    fromTo('.dropdown-content', .90, {top: '45px', display: 'none', height: '0'}, {top: '60px', display: 'flex', height: '157.4px'})
+    .staggerFrom('.dropdown-link', .2, {fontSize: 0}, .095)
+    // to('.dropdown-content', 2, {height: '157.4px'})
+    // .to('.dropdown-link', 1, {scale: 1})
 class Dropdown {
   constructor(element) {
 
@@ -18,6 +25,8 @@ class Dropdown {
 
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+    //GSAP animations
+    slideMenu.reversed() ? slideMenu.play() : slideMenu.reverse();
   }
 }
 
