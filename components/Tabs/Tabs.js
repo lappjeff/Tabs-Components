@@ -1,7 +1,7 @@
-let slideText = new TimelineMax({paused: true, reverse: true})
 
-slideText.
-    to('.tabs-item-selected', .3, {display: 'block'})
+
+
+
 class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
@@ -15,6 +15,7 @@ class TabLink {
     this.tabItem = new TabItem(this.itemElement);
     // Add a click event listener on this instance, calling the select method on click
     this.element.addEventListener('click', this.select.bind(this));
+
   };
 
   select() {
@@ -26,11 +27,9 @@ class TabLink {
     })
     // Add a class named "tabs-link-selected" to this link
     this.element.classList.add('tabs-link-selected');
-
     // Call the select method on the item associated with this link
     this.tabItem.select();
 
-    slideText.reversed() ? slideText.play() : slideText.reverse();slideText
 
   }
 }
@@ -49,6 +48,7 @@ class TabItem {
     items.forEach(function(item) {
         item.classList.remove('tabs-item-selected')
     })
+
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
   }

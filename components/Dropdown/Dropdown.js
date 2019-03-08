@@ -1,4 +1,4 @@
-let slideMenu = new TimelineMax({paused: true, reverse: true})
+let slideMenu = new TimelineMax({paused: true, reversed: true})
 
 slideMenu.
     fromTo('.dropdown-content', .90, {top: '45px', display: 'none', height: '0'}, {top: '60px', display: 'flex', height: '157.4px'})
